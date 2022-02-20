@@ -66,7 +66,6 @@ const Minter = (props) => {
 
   return (
     <div className="Minter">
-      <img src="meta.png" ></img>
       <Button variant="primary" id="walletButton" onClick={connectWalletPressed}>
         {walletAddress.length > 0 ? (
           "Connected: " +
@@ -74,7 +73,7 @@ const Minter = (props) => {
           "..." +
           String(walletAddress).substring(38)
         ) : (
-          <span>🦊 Connect Wallet</span>
+          <span>Connect Wallet</span>
         )}
       </Button>
       <br></br>

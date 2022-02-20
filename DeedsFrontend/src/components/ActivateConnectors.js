@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import connectors from "../Connectors.js";
 import { useWeb3Context } from "web3-react";
 import { ethers } from 'ethers'
+import Button from 'react-bootstrap/Button';
 
 //Initializes the web3 context to use it for properties on the app.s
 function ActivateConnectors(props) {
@@ -41,9 +42,10 @@ function ActivateConnectors(props) {
      
       <div>
         {!context.active && (
-        <button onClick={() => context.setConnector('Metamask')}>
+          //<Button as={Col} variant="primary">Metamask</Button>
+        <Button as={Col} variant="success" onClick={() => context.setConnector('Metamask')}>
             Metamask
-        </button>)}
+        </Button>)}
       </div>
       {context.active && (
         <button onClick={() => context.unsetConnector()}>

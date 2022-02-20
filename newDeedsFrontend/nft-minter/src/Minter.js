@@ -1,3 +1,4 @@
+import Button from 'react-bootstrap/Button';
 import { useEffect, useState } from "react";
 import {
   connectWallet,
@@ -65,17 +66,17 @@ const Minter = (props) => {
 
   return (
     <div className="Minter">
-      <button id="walletButton" onClick={connectWalletPressed}>
+      <img src="meta.png" ></img>
+      <Button variant="primary" id="walletButton" onClick={connectWalletPressed}>
         {walletAddress.length > 0 ? (
           "Connected: " +
           String(walletAddress).substring(0, 6) +
           "..." +
           String(walletAddress).substring(38)
         ) : (
-          <span>Connect Wallet</span>
+          <span>🦊 Connect Wallet</span>
         )}
-      </button>
-
+      </Button>
       <br></br>
       <h1 id="title">🧙‍♂️ Alchemy NFT Minter</h1>
       <p>
